@@ -1,0 +1,27 @@
+<?php
+
+$a = mt_rand(0, 100000);
+$c = (string) $a;
+echo $a . '- Number </br>';
+$b = strlen($a);
+echo $b . '- String length</br>';
+echo 'Result: ';
+switch ($b) {
+    case $b == 1:
+        echo '0' . $a;
+        break;
+    case $b == 2:
+        echo $a;
+        break;
+    case $b == 3:
+        echo 'це число у шіснадцятковій системі:'. $a.' =)';
+        break;
+    case $b == 4:
+        echo $c{0} + $c{1};
+        echo $c{2} + $c{3};
+        break;
+    default:
+        echo $a;
+        break;
+}
+?>

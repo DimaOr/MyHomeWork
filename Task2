@@ -13,7 +13,7 @@ echo 'Количество успехов :' . $kolUspex . '</br>';
 echo 'Вероятность успеха :';
 switch ($kolUspex) {
     case $kolUspex == 0;
-        echo veroyatnost($kolUspex);
+        echo 0;
         break;
     case $kolUspex == 1;
         echo veroyatnost($kolUspex);

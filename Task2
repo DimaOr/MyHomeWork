@@ -1,0 +1,33 @@
+<?php
+
+$countKub=4;
+function veroyatnost($kolUspex){
+    $shansUspexa=1/3; //вероятность 5 и 6
+    $shansNeUspexa=2/3; // вероятность выпадения 1, 2, 3, 4.
+    $kolNeUspex=4-$kolUspex;
+    return pow($shansUspexa,$kolUspex)* pow($shansNeUspexa,$kolNeUspex);
+}
+
+$kolUspex = mt_rand(0, 4);
+echo 'Количество успехов :' . $kolUspex . '</br>';
+echo 'Вероятность успеха :';
+switch ($kolUspex) {
+    case $kolUspex == 0;
+        echo veroyatnost($kolUspex);
+        break;
+    case $kolUspex == 1;
+        echo veroyatnost($kolUspex);
+        break;
+    case $kolUspex == 2;
+        echo veroyatnost($kolUspex);
+        break;
+    case $kolUspex == 3;
+        echo veroyatnost($kolUspex);
+        break;
+    case $kolUspex == 4;
+        echo veroyatnost($kolUspex);
+        break;
+    default:
+        echo 'Ошибка!';
+        break;
+}

@@ -1,0 +1,79 @@
+<?php
+$s0 = 0;
+$b7 = 0;
+$s1 = 5;
+$bykva = array('A', 'B', 'C', 'D', 'E', 'F');
+$r = array($bykva[$s0], $bykva[$s1], 9, 9, 9, 9, $b7);
+$count = count($r) - 1;
+
+//echo $r[0]=$bykva[1];
+
+function addOne() {
+
+
+    global $b7, $r, $bykva, $count;
+    $r[$count] = ++$b7;
+
+
+    for ($i = count($r) - 1; $i > 0; $i--) {
+
+        if ($r[$i] > 9 or $b7 > 9) {
+            $b7 = 0;
+            $r[$i] = 0;
+
+            if (!is_array($r[$i - 1])) {
+                $r[$i - 1] ++;
+            } else {
+                $r[$i] = $bykva[$s1++];
+                if ($bykva[$s1 > 5]) {
+                    $bykva[$s1 = 0];
+                    $r[$i] = $bykva[$s0++];
+                    if ($bykva[$s0 > 5] and $bykva[$s1 > 5]) {
+                        echo 'finish';
+                    }
+                }
+            }
+        }
+    }
+    print_r($r);
+    $a1 = implode('', $r);
+    echo $a1 . '</br>';
+}
+
+addOne();
+addOne();
+addOne();
+addOne();
+addOne();
+addOne();
+addOne();
+addOne();
+addOne();
+addOne();
+addOne();
+addOne();
+addOne();
+addOne();
+addOne();
+addOne();
+addOne();
+addOne();
+addOne();
+addOne();
+addOne();
+addOne();
+addOne();
+addOne();
+addOne();
+addOne();
+addOne();
+addOne();
+addOne();
+addOne();
+addOne();
+addOne();
+addOne();
+addOne();
+addOne();
+
+?>
